@@ -15,10 +15,12 @@ repositories {
     mavenCentral()
 }
 
+bootJar {
+    archiveClassifier.set('boot')
+}
+
 jar {
-    manifest {
-        attributes 'Main-Class': 'WelcomeController'
-    }
+    archiveClassifier.set('')
 }
 
 dependencies {
